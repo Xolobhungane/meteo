@@ -7,22 +7,59 @@
   </head>
   <body>
     <header>
-      <form>
+      <div class="panel">
+      <form id="locationInput">
         <input type="search" placeholder="Enter a city. ." required />
-        <input type="submit" value="search" />
+        <button type="submit" value="search" >
+          <i class="fas fa-search"></i>
+        </button>
       </form>
     </header>
     <main>
-      <div>
-        <h1>Pietermariztburg</h1>
-        <p>
-          Monday 03:41, scattered clouds,
-          <br />
-          20°C, feels like 20°C, humidity 60%, wind speed 3.1 m/s
-        </p>
+      <div class="weather-app">
+        <div class="container">
+          <h3 class="brand">The Weather Application</h3>
+        </div>
+        <div class="city-time">
+        <h1 class="name">Pietermaritzburg</h1>
+    
+        <small>
+          <span class="time">03:41</span> , 
+          <span class="date">Monday, Jun 03</span>
+        </small>
+          <div class="weather">
+            <icon
+            🌨️/>
+          
+          <span class="condition">Scattered Clouds</span>
+          </div>
+        </div>
+          <h1 class="temp">20°C, </h1> 
+          <ul class="details">
+          <h4>Weather Details</h4>
+          <li>
+            <span>Scattered clouds</span>
+            <span class="clouds">70%</span>
+            </li>
+            <li>
+          <span>humidity</span>
+          <span class="humidity">60%</span>
+          </li>
+          <li>
+            <span>Wind</span>
+            <span class="wind">3.1km/h</span>
+          </li>
+          </ul>
       </div>
-      <div>🌨️20°C</div>
+  
+      <ul class="cities">
+        <li class="city">Johannesburg</li>
+        <li class="city">Tokyo</li>
+        <li class="city">Cape Town</li>
+        <li class="city">California</li>
+      </ul>
     </main>
+  </div>
 
     <footer>
       Coded by
