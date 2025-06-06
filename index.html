@@ -3,9 +3,14 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./src/index.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
+    <link rel="icon" href="./images/favicon.ico" type="image/x-icon" />
+    <script src="https://cdn.jsdelivr.net/npm/axios@1.6.7/dist/axios.min.js"></script>
     <title>Weather Forecast App</title>
   </head>
   <body>
+  <div class="overlay">
     <header>
       <div class="panel">
       <form id="locationInput">
@@ -34,7 +39,7 @@
           <span class="condition">Scattered Clouds</span>
           </div>
         </div>
-          <h1 class="temp">20°C, </h1> 
+          <h1 class="temp">🌨️20°C, </h1> 
           <ul class="details">
           <h4>Weather Details</h4>
           <li>
@@ -51,7 +56,7 @@
           </li>
           </ul>
       </div>
-  
+      <h4 class="cities-header">Other Cities</h4>
       <ul class="cities">
         <li class="city">Johannesburg</li>
         <li class="city">Tokyo</li>
@@ -63,11 +68,11 @@
 
     <footer>
       Coded by
-      <a href="https://github.com/Xolobhungane" target="_blank"></a> Noxolo
-      Hadebe code is hosted
-      <a href="https://github.com/Xolobhungane/meteo" target="_blank"></a>
+      <a href="https://github.com/Xolobhungane" target="_blank"> Noxolo Hadebe's Github</a> code is hosted
+      <a href="https://github.com/Xolobhungane/meteo" target="_blank"> View Source code</a>
       Github and website is hosted on Netlify
-      <a href="https://prevision-app.netlify.app/" target="_blank"></a>
+      <a href="https://prevision-app.netlify.app/" target="_blank">Visit the app</a>
     </footer>
+  </div>
   </body>
 </html>
