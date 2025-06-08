@@ -3,6 +3,9 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Delius&family=Fira+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Lobster&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Winky+Sans:ital,wght@0,300..900;1,300..900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="./src/index.css" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
     <link rel="icon" href="./images/favicon.ico" type="image/x-icon" />
@@ -12,50 +15,55 @@
   <body>
   <div class="overlay">
     <header>
+      <div class="container">
+      <h3 class="brand">The Weather Application</h3>
+      </div>
       <div class="panel">
       <form id="locationInput">
-        <input type="search" placeholder="Enter a city. ." required />
-        <button type="submit" value="search" >
+        <input type="search" placeholder="Enter a city. ." required class="search-form-input" />
+        <button type="submit" value="search" class="search-form-button" >
           <i class="fas fa-search"></i>
         </button>
       </form>
+    </div>
     </header>
     <main>
-      <div class="weather-app">
-        <div class="container">
-          <h3 class="brand">The Weather Application</h3>
-        </div>
-        <div class="city-time">
-        <h1 class="name">Pietermaritzburg</h1>
-    
-        <small>
+        
+      <div class="weather-app-data">
+        <p>
+          <div class="weather-app-details">
+            <h1 class="name">Pietermaritzburg</h1>
+          <h4>Weather details</h4>
           <span class="time">03:41</span> , 
-          <span class="date">Monday, Jun 03</span>
-        </small>
-          <div class="weather">
-            <icon
-            🌨️/>
-          
-          <span class="condition">Scattered Clouds</span>
-          </div>
-        </div>
-          <h1 class="temp">🌨️20°C, </h1> 
-          <ul class="details">
-          <h4>Weather Details</h4>
+          <span class="date">Monday, Scattered Clouds</span>
           <li>
             <span>Scattered clouds</span>
             <span class="clouds">70%</span>
             </li>
             <li>
           <span>humidity</span>
-          <span class="humidity">60%</span>
+          <span class="clouds">60%</span>
           </li>
           <li>
             <span>Wind</span>
-            <span class="wind">3.1km/h</span>
+            <span class="clouds">3.1km/h</span>
           </li>
-          </ul>
-      </div>
+          </div>  
+        </p>
+    </span>
+          <div class="weather-app-temperature-container">
+           <div class="weather-app-icon">🌨️</div>
+           <div class="weather-app-temperature">20</div>
+           <div class="weather-app-unit">°C</div>
+          </div>
+        
+            </span>
+
+          
+        
+        </div>
+  
+    
       <h4 class="cities-header">Other Cities</h4>
       <ul class="cities">
         <li class="city">Johannesburg</li>
@@ -64,7 +72,6 @@
         <li class="city">California</li>
       </ul>
     </main>
-  </div>
 
     <footer>
       Coded by
@@ -74,5 +81,6 @@
       <a href="https://prevision-app.netlify.app/" target="_blank">Visit the app</a>
     </footer>
   </div>
+</div>
   </body>
 </html>
