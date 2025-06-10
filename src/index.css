@@ -61,7 +61,7 @@ main {
   color: rgba(12, 12, 12, 0.6);
 }
 .weather-app-details strong {
-  color: #a38cdb;
+  color: #60489c;
 }
 .weather-app-temperature-container {
   display: flex;
