@@ -19,10 +19,14 @@
       <h3 class="brand">The Weather Application</h3>
       </div>
       <div class="panel">
-      <form id="locationInput">
-        <input type="search" placeholder="Enter a city. ." required class="search-form-input" />
+      <form class ="search-form" id="search-form">
+        <input type="search" 
+        placeholder="Enter a city. ." 
+        required 
+        class="search-form-input"
+          id="search-form-input" />
         <button type="submit" value="search" class="search-form-button" >
-          <i class="fas fa-search"></i>
+          <i></i>
         </button>
       </form>
     </div>
@@ -32,7 +36,7 @@
       <div class="weather-app-data">
         <p>
           <div class="weather-app-details">
-            <h1 class="name">Pietermaritzburg</h1>
+            <h1 class="name" id="city">Pietermaritzburg</h1>
         
           <h4 class="details">Weather details</h4>
           <span class="time">03:41</span> , 
@@ -83,5 +87,6 @@
     </footer>
   </div>
 </div>
+<script src="./src/index.js"></script>
   </body>
 </html>
