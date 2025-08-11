@@ -3,157 +3,171 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Delius&family=Fira+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Lobster&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Winky+Sans:ital,wght@0,300..900;1,300..900&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Delius&family=Fira+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Lobster&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Winky+Sans:ital,wght@0,300..900;1,300..900&display=swap"
+      rel="stylesheet"
+    />
     <link rel="stylesheet" href="./src/index.css" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+    />
     <script src="https://cdn.jsdelivr.net/npm/axios@1.6.7/dist/axios.min.js"></script>
     <title>Weather Forecast App</title>
   </head>
   <body>
-  <div class="overlay">
-    <header>
-      <div class="container">
-      <h3 class="brand">The Weather Application</h3>
-      </div>
-      <div class="panel">
-      <form class ="search-form" id="search-form">
-        <input type="search" 
-        placeholder="Enter a city. ." 
-        required 
-        class="search-form-input"
-          id="search-form-input" />
-        <button type="submit" value="search" class="search-form-button" >
-          <i class="fas fa-search"></i>
-        </button>
-      </form>
-    </div>
-    </header>
-    <main>
-        
-      <div class="weather-app-data">
-        <p>
+    <div class="overlay">
+      <header>
+        <div class="container">
+          <h3 class="brand">The Weather Application</h3>
+        </div>
+        <div class="panel">
+          <form class="search-form" id="search-form">
+            <input
+              type="search"
+              placeholder="Enter a city. ."
+              required
+              class="search-form-input"
+              id="search-form-input"
+            />
+            <button type="submit" value="search" class="search-form-button">
+              <i class="fas fa-search"></i>
+            </button>
+          </form>
+        </div>
+      </header>
+      <main>
+        <div class="weather-app-data">
           <div class="weather-app-details">
             <h1 class="name" id="city"></h1>
-        
-          <h4 class="details">Weather details</h4>
-          <span id="time"></span> , 
-          <span id="description"></span>
-          <li>
-            
-          <span>humidity:</span>
-          <strong id="humidity"></strong>
-          </li>
-          <li>
-            <span>Wind:</span>
-            <strong id="wind-speed"></strong>
-          </li>
-          </div>  
-        </p>
-    </span>
+            <h4 class="details">Weather details</h4>
+            <span id="time"></span>
+            <span id="description"></span>
+            <ul>
+              <li>
+                <span>Humidity:</span>
+                <strong id="humidity"></strong>
+              </li>
+              <li>
+                <span>Wind:</span>
+                <strong id="wind-speed"></strong>
+              </li>
+            </ul>
+          </div>
           <div class="weather-app-temperature-container">
-            <div id="icon"></div>
-           <div class="weather-app-temperature" id="temperature"></div>
-           <div class="weather-app-unit">°C</div>
-          </div>
-        </span>
-
-        </div>
-      <h4 class="cities-header">Other Cities</h4>
-      <ul class="cities">
-        <li class="city">Johannesburg</li>
-        <li class="city">Tokyo</li>
-        <li class="city">Cape Town</li>
-        <li class="city">California</li>
-      </ul>
-
-    <div class="weather-forecast">
-      <div class="weather-forecast-day"> 
-        <div class="weather-forecast-date">Tues</div> 
-        <div class="weather-forecast-icon">🥶 </div>
-        <div class="weather-forecast-temperatures"> 
-          <div class="weather-forecast-temperature">
-            <strong>15°C</strong></div>
-         <div class="weather-forecast-temperature">9°C </div>
-        </div>
-    </div>
-    <div class="weather-forecast">
-      <div class="weather-forecast-day">
-        <div class="weather-forecast-date">Wed</div>
-        <div class="weather-forecast-icon">🥵</div>
-        <div class="weather-forecast-temperatures">
-          <div class="weather-forecast-temperature">
-            <strong>20°C</strong></div>
-          <div class="weather-forecast-temperature">10°C</div>
-      </div>
-    </div>
-    <div class="weather-forecast">
-      <div class="weather-forecast-day">
-        <div class="weather-forecast-date">Thurs</div>
-        <div class="weather-forecast-icon">🌧️</div>
-        <div class="weather-forecast-temperatures">
-          <div class="weather-forecast-temperature">
-            <strong>18°C</strong></div>
-          <div class="weather-forecast-temperature">12°C</div>
-      </div>
-    </div>
-    <div class="weather-forecast">
-      <div class="weather-forecast-day">
-        <div class="weather-forecast-date">Fri</div>
-        <div class="weather-forecast-icon">🌤️</div>
-        <div class="weather-forecast-temperatures">
-          <div class="weather-forecast-temperature">
-            <strong>22°C</strong></div>
-          <div class="weather-forecast-temperature">14°C</div>
-      </div>
-      </div>
-      <div class="weather-forecast">
-    <div class="weather-forecast-day">    
-    <div class="weather-forecast-date">Sat</div>
-    <div class="weather-forecast-icon">🌥️</div>
-    <div class="weather-forecast-temperatures">
-      <div class="weather-forecast-temperature">
-        <strong>19°C</strong></div>
-      <div class="weather-forecast-temperature">11°C</div>
-    </div>
-    </div>
-    <div class="weather-forecast">
-      <div class="weather-forecast-day">
-        <div class="weather-forecast-date">Sun</div>
-        <div class="weather-forecast-icon">🌦️</div>
-        <div class="weather-forecast-temperatures">
-          <div class="weather-forecast-temperature">
-            <strong>21°C</strong></div>
-          <div class="weather-forecast-temperature">13°C</div>
-        </div>
-      </div>
-      <div class="weather-forecast">
-        <div class="weather-forecast-day">
-          <div class="weather-forecast-date">Mon</div>
-          <div class="weather-forecast-icon">🌩️</div>
-          <div class="weather-forecast-temperatures">
-            <div class="weather-forecast-temperature">
-              <strong>17°C</strong></div>
-            <div class="weather-forecast-temperature">10°C</div>
+            <div id="icon" aria-label="Weather icon" role="img"></div>
+            <div class="weather-app-temperature" id="temperature"></div>
+            <span class="weather-app-unit" aria-label="Temperature unit"
+              >°C</span
+            >
           </div>
         </div>
-    
-    </main>
+        <nav aria-label="Other Cities">
+          <h4 class="cities-header">Other Cities</h4>
+          <ul class="cities" id="other-cities">
+            <li class="city"><button type="button">Johannesburg</button></li>
+            <li class="city"><button type="button">Tokyo</button></li>
+            <li class="city"><button type="button">Cape Town</button></li>
+            <li class="city"><button type="button">California</button></li>
+          </ul>
+        </nav>
 
-    <footer>
-      Coded by
-      <a href="https://github.com/Xolobhungane" target="_blank"> Noxolo Hadebe's Github</a> code is hosted
-      <a href="https://github.com/Xolobhungane/meteo" target="_blank"> View Source code</a>
-      Github and website is hosted on Netlify
-      <a href="https://prevision-app.netlify.app/" target="_blank">Visit the app</a>
-    </footer>
-  </div>
-</div>
+        <div class="weather-forecast">
+          <div class="weather-forecast-day">
+            <div class="weather-forecast-date">Tues</div>
+            <div class="weather-forecast-icon">🥶</div>
+            <div class="weather-forecast-temperatures">
+              <div class="weather-forecast-temperature">
+                <strong>15°C</strong>
+              </div>
+              <div class="weather-forecast-temperature">9°C</div>
+            </div>
+          </div>
+          <div class="weather-forecast-day">
+            <div class="weather-forecast-date">Wed</div>
+            <div class="weather-forecast-icon">🥵</div>
+            <div class="weather-forecast-temperatures">
+              <div class="weather-forecast-temperature">
+                <strong>20°C</strong>
+              </div>
+              <div class="weather-forecast-temperature">10°C</div>
+            </div>
+          </div>
+          <div class="weather-forecast-day">
+            <div class="weather-forecast-date">Thurs</div>
+            <div class="weather-forecast-icon">🌧️</div>
+            <div class="weather-forecast-temperatures">
+              <div class="weather-forecast-temperature">
+                <strong>18°C</strong>
+              </div>
+              <div class="weather-forecast-temperature">12°C</div>
+            </div>
+          </div>
+          <div class="weather-forecast-day">
+            <div class="weather-forecast-date">Fri</div>
+            <div class="weather-forecast-icon">🌤️</div>
+            <div class="weather-forecast-temperatures">
+              <div class="weather-forecast-temperature">
+                <strong>22°C</strong>
+              </div>
+              <div class="weather-forecast-temperature">14°C</div>
+            </div>
+          </div>
+          <div class="weather-forecast-day">
+            <div class="weather-forecast-date">Sat</div>
+            <div class="weather-forecast-icon">🌥️</div>
+            <div class="weather-forecast-temperatures">
+              <div class="weather-forecast-temperature">
+                <strong>19°C</strong>
+              </div>
+              <div class="weather-forecast-temperature">11°C</div>
+            </div>
+          </div>
+          <div class="weather-forecast-day">
+            <div class="weather-forecast-date">Sun</div>
+            <div class="weather-forecast-icon">🌦️</div>
+            <div class="weather-forecast-temperatures">
+              <div class="weather-forecast-temperature">
+                <strong>21°C</strong>
+              </div>
+              <div class="weather-forecast-temperature">13°C</div>
+            </div>
+          </div>
+          <div class="weather-forecast-day">
+            <div class="weather-forecast-date">Mon</div>
+            <div class="weather-forecast-icon">🌩️</div>
+            <div class="weather-forecast-temperatures">
+              <div class="weather-forecast-temperature">
+                <strong>17°C</strong>
+              </div>
+              <div class="weather-forecast-temperature">10°C</div>
+            </div>
+          </div>
+        </div>
+      </main>
 
-</div>
-<!DOCTYPE html>
+      <footer>
+        Coded by
+        <a href="https://github.com/Xolobhungane" target="_blank" lang="en">
+          Noxolo Hadebe's Github</a
+        >
+        code is hosted
+        <a
+          href="https://github.com/Xolobhungane/meteo"
+          target="_blank"
+          lang="en"
+        >
+          View Source code</a
+        >
+        Github and website is hosted on Netlify
+        <a href="https://prevision-app.netlify.app/" target="_blank" lang="en">
+          Visit the app</a
+        >
+      </footer>
+    </div>
 
-<script src="./src/index.js"></script>
+    <script src="./src/index.js"></script>
   </body>
 </html>
