@@ -15,8 +15,8 @@ a {
   margin: 45px auto;
   box-shadow: 0 30px 50px rgba(65, 50, 100, 0.08);
   background-image: url(https://all-free-download.com/free-vector/download/weather_background_template_cute_stylized_handdrawn_weather_elements_6931789.html);
-  border-radius: 10px;
-  padding: 30px;
+  border-radius: 30px;
+  padding: 50px;
 }
 
 header {
@@ -44,7 +44,7 @@ header {
 }
 
 main {
-  padding: 30px 0;
+  padding: 40px 0;
 }
 
 .weather-app-data {
